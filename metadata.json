@@ -1,0 +1,5 @@
+{
+  "name": "Maths Solver - Terminale S",
+  "description": "Une application pour résoudre les problèmes de mathématiques pour les élèves de Terminale S, couvrant l'arithmétique, les nombres complexes, et plus.",
+  "requestFramePermissions": []
+}
