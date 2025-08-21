@@ -1,12 +1,12 @@
 :root {
-  --primary-color: #0d47a1; /* Deep Blue */
-  --secondary-color: #1976d2; /* Medium Blue */
-  --accent-color: #42a5f5; /* Light Blue */
-  --background-color: #f4f6f8;
-  --text-color: #333;
-  --card-background: #ffffff;
-  --border-radius: 8px;
-  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --primary-color: #0000CD; /* Medium Blue */
+  --secondary-color: #0000FF; /* Blue */
+  --accent-color: #FFFF00; /* Yellow */
+  --background-color: transparent;
+  --text-color: #000000;
+  --card-background: #C0C0C0; /* Silver/Grey */
+  --border-radius: 0;
+  --box-shadow: none;
 }
 
 * {
@@ -16,8 +16,8 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif;
-  background-color: var(--background-color);
+  font-family: 'Times New Roman', Times, serif;
+  background-image: url('https://www.geocities.ws/moulmaths/images/back2.gif');
   color: var(--text-color);
   line-height: 1.6;
 }
@@ -26,6 +26,8 @@ body {
   max-width: 900px;
   margin: 2rem auto;
   padding: 1rem;
+  background-color: var(--card-background);
+  border: 2px outset #ffffff;
 }
 
 header {
@@ -34,9 +36,11 @@ header {
 }
 
 header h1 {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   font-size: 2.5em;
-  color: var(--primary-color);
+  color: var(--accent-color);
   font-weight: 700;
+  text-shadow: 2px 2px #000;
 }
 
 .theme-nav {
@@ -49,33 +53,29 @@ header h1 {
 
 .theme-button {
   padding: 0.75rem 1.5rem;
-  border: 1px solid var(--secondary-color);
-  background-color: transparent;
-  color: var(--secondary-color);
-  border-radius: var(--border-radius);
+  border: 2px outset #ffffff;
+  background-color: var(--card-background);
+  color: var(--text-color);
   cursor: pointer;
   font-size: 1rem;
   font-weight: 700;
-  transition: all 0.3s ease;
 }
 
 .theme-button:hover, .theme-button.active {
-  background-color: var(--secondary-color);
-  color: white;
+  background-color: #a9a9a9;
+  border-style: inset;
 }
 
 .solver-container {
-  background-color: var(--card-background);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  border: 2px inset #ffffff;
 }
 
 .solver-container h2 {
   font-size: 1.8em;
   color: var(--primary-color);
   margin-bottom: 1.5rem;
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--primary-color);
   padding-bottom: 0.5rem;
 }
 
@@ -85,8 +85,8 @@ header h1 {
   padding: 1rem;
   font-family: inherit;
   font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: var(--border-radius);
+  border: 2px inset #ffffff;
+  background-color: #ffffff;
   resize: vertical;
   margin-bottom: 1rem;
 }
@@ -99,10 +99,8 @@ header h1 {
   font-weight: 700;
   color: white;
   background-color: var(--primary-color);
-  border: none;
-  border-radius: var(--border-radius);
+  border: 2px outset #ffffff;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .solve-button:hover:not(:disabled) {
@@ -110,8 +108,10 @@ header h1 {
 }
 
 .solve-button:disabled {
-  background-color: #90a4ae;
+  background-color: #808080;
   cursor: not-allowed;
+  border-style: inset;
+  color: #c0c0c0;
 }
 
 .solution-section {
@@ -123,10 +123,9 @@ header h1 {
 }
 
 .solution-output {
-  background-color: var(--background-color);
+  background-color: #ffffff;
   padding: 1.5rem;
-  border-radius: var(--border-radius);
-  border: 1px solid #e0e0e0;
+  border: 2px inset #ffffff;
   min-height: 100px;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -145,19 +144,19 @@ header h1 {
 .solution-output code {
     background-color: #e0e0e0;
     padding: 0.2em 0.4em;
-    border-radius: 3px;
-    font-family: monospace;
+    border: 1px solid #b0b0b0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .solution-output pre {
     background-color: #e0e0e0;
     padding: 1em;
-    border-radius: var(--border-radius);
+    border: 1px inset #ffffff;
     overflow-x: auto;
 }
 
 .loader {
-  border: 4px solid #f3f3f3;
+  border: 4px solid #b0b0b0;
   border-radius: 50%;
   border-top: 4px solid var(--primary-color);
   width: 30px;
@@ -186,12 +185,15 @@ header h1 {
   color: #d32f2f;
   background-color: #ffcdd2;
   padding: 1rem;
-  border-radius: var(--border-radius);
-  border: 1px solid #d32f2f;
+  border: 2px solid #d32f2f;
 }
 
 
 @media (max-width: 600px) {
+  #root {
+    margin: 1rem;
+    padding: 0.5rem;
+  }
   header h1 {
     font-size: 2em;
   }
@@ -199,6 +201,6 @@ header h1 {
     flex-grow: 1;
   }
   .solver-container {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 }

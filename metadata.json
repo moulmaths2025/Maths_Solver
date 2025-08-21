@@ -1,5 +1,5 @@
 {
-  "name": "Maths Solver - Terminale S",
-  "description": "Une application pour résoudre les problèmes de mathématiques pour les élèves de Terminale S, couvrant l'arithmétique, les nombres complexes, et plus.",
+  "name": "Moulmaths - Maths Solver",
+  "description": "Un solveur de problèmes mathématiques intégré au style du site Moulmaths de Geocities. Pour les élèves de Terminale S, couvrant l'arithmétique, les nombres complexes, et plus.",
   "requestFramePermissions": []
 }
